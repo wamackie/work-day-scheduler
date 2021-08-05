@@ -1,20 +1,38 @@
 var date = moment().format('dddd MMMM Do');
-console.log(date)
+console.log('date', date)
 
 var time = moment().format('h A');
-console.log(time)
+console.log('time', time)
 
 var currentDayEl = document.getElementById('currentDay')
 
-var timeBlockElement = document.querySelector('.hour')
+var allTimeBlockEl = document.querySelectorAll('.hour')
 
-console.log(timeBlockElement.textContent)
+console.log('allTimeBlockEl', allTimeBlockEl)
 
+ var descriptionEl = document.querySelector('description')
 
+ checkTime();
+ function checkTime() {
+    for (i = 0; i < 9; i++) {
+    console.log('allTimeBlockEl[i].textContent', allTimeBlockEl[i].textContent);
+    
+        var colTime = ('allTimeBlockEli[i].textContent')
 
-for (i = 0; i < 9; i++) {
-    var containerEl = document.querySelector('.container')
-    console.log(containerEl.childNodes[i].childNodes[0])
+        if (colTime > time) {
+            (descriptionEl).addClass("future");
+        }
+        else if (colTime < time) {
+            (descriptionEl).addClass("past");
+        }
+        else {
+            (descriptionEl).addClass("present");
+        }
+    }
 }
+
+$(#saveBtn).click(function() {
+    checkTime()
+})
 
 currentDayEl.textContent = date
