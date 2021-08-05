@@ -10,28 +10,26 @@ var allTimeBlockEl = document.querySelectorAll('.hour')
 
 console.log('allTimeBlockEl', allTimeBlockEl)
 
- var descriptionEl = document.querySelector('description')
+ var descriptionEl = document.querySelectorAll('.description')
 
  checkTime();
- function checkTime() {
+function checkTime() {
     for (i = 0; i < 9; i++) {
-    console.log('allTimeBlockEl[i].textContent', allTimeBlockEl[i].textContent);
-    
-
+        console.log('allTimeBlockEl[i].textContent', allTimeBlockEl[i].textContent);
+        console.log('descriptionEl[i]', descriptionEl[i]);
         if (allTimeBlockEl[i].textContent > time) {
-            (descriptionEl[i]).addClass("future");
-        }
-        else if (allTimeBlockEl[i].textContent < time) {
-            (descriptionEl)[i].addClass("past");
-        }
-        else {
-            (descriptionEl[i]).addClass("present");
+            descriptionEl[i].classList.add('past');
+        } else if (allTimeBlockEl[i].textContent < time) {
+            descriptionEl[i].classList.add('future');
+        } else {
+            descriptionEl[i].classList.add('present');
         }
     }
 }
 
-//$(#saveBtn).click(function() {
-//    checkTime()
-//})
+
+//  $("#.saveBtn").click(function() {
+//      checkTime()
+//  })
 
 currentDayEl.textContent = date
