@@ -14,9 +14,7 @@ console.log(timeBlockElement.textContent)
 
 for (i = 0; i < 9; i++) {
     var containerEl = document.querySelector('.container')
-    console.log(containerEl.childNodes[i].childNodes[1].innerHtml)
+    console.log(containerEl.childNodes[i].childNodes[0])
 }
 
 currentDayEl.textContent = date
-
-//.childNodes[0]
