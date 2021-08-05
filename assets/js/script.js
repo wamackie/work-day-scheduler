@@ -17,22 +17,21 @@ console.log('allTimeBlockEl', allTimeBlockEl)
     for (i = 0; i < 9; i++) {
     console.log('allTimeBlockEl[i].textContent', allTimeBlockEl[i].textContent);
     
-        var colTime = ('allTimeBlockEli[i].textContent')
 
-        if (colTime > time) {
-            (descriptionEl).addClass("future");
+        if (allTimeBlockEl[i].textContent > time) {
+            (descriptionEl[i]).addClass("future");
         }
-        else if (colTime < time) {
-            (descriptionEl).addClass("past");
+        else if (allTimeBlockEl[i].textContent < time) {
+            (descriptionEl)[i].addClass("past");
         }
         else {
-            (descriptionEl).addClass("present");
+            (descriptionEl[i]).addClass("present");
         }
     }
 }
 
-$(#saveBtn).click(function() {
-    checkTime()
-})
+//$(#saveBtn).click(function() {
+//    checkTime()
+//})
 
 currentDayEl.textContent = date
