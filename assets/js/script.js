@@ -15,13 +15,11 @@ console.log('allTimeBlockEl', allTimeBlockEl)
  checkTime();
 function checkTime() {
     for (i = 0; i < 9; i++) {
-        console.log('allTimeBlockEl[i].textContent', allTimeBlockEl[i].textContent);
-        console.log('descriptionEl[i]', descriptionEl[i]);
-
+        console.log(parseInt(allTimeBlockEl[i].textContent))
         if (allTimeBlockEl[i].textContent > time) {
-            descriptionEl[i].classList.add('past');
-        } else if (allTimeBlockEl[i].textContent < time) {
             descriptionEl[i].classList.add('future');
+        } else if (allTimeBlockEl[i].textContent < time) {
+            descriptionEl[i].classList.add('past');
         } else {
             descriptionEl[i].classList.add('present');
         }
