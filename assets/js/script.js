@@ -12,6 +12,8 @@ var descriptionEl = document.querySelectorAll('.description')
 
 var dataTimeTypeEl = document.getElementsByClassName('hour')
 
+var buttons = document.querySelectorAll('.saveBtn')
+
 console.log('dataTimeTypeEl', dataTimeTypeEl)
 
 checkTime();
@@ -31,4 +33,14 @@ function checkTime() {
     }
 }
 
+//save to local storage
+function logData() {
+    for (i=0; i < 9; i++){
+    console.log('button is working')
+    console.log(descriptionEl[i])
+    }
+}
+
 currentDayEl.textContent = date
+console.log(buttons)
+console.log(descriptionEl)
