@@ -31,6 +31,4 @@ function checkTime() {
     }
 }
 
-
-
 currentDayEl.textContent = date
