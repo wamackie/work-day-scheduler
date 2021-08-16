@@ -12,7 +12,7 @@ Work Day Scheduler is a daily planner that displays past hours in grey, the pres
 * Bootstrap
 
 ## Website
-https://wamackie8456.github.io/work-day-scheduler/
+https://wamackie.github.io/work-day-scheduler/
 
 ![screenshot](assets/images/schedule.png)
 
